@@ -48,6 +48,12 @@ public class DivisionProcessor {
 		return result.substring(1);
 	}
 	
+	private static String clearZeros(String polynomial) {
+		if(polynomial.startsWith("0")) polynomial = polynomial.substring(2);
+		if(polynomial.endsWith("0")) polynomial = polynomial.substring(0, polynomial.length()-2);
+		return polynomial.replace("x0x", "x");
+	}
+	
 	/**
 	 * XORs one polynomial with another.
 	 * @param polynomialOne the first polynomial
@@ -58,7 +64,7 @@ public class DivisionProcessor {
 		String result = "";
 		String[] o = polynomialOne.split("x"), t = polynomialTwo.split("x");
 		for(int i = 0; i<Math.max(o.length, t.length); i++) result += "x" + ((i < o.length ? Integer.parseInt(o[i]) : 0) ^ (i < t.length ? Integer.parseInt(t[i]) : 0));
-		return result.startsWith("x0") ? result.split("x", 3)[2] : result.substring(1);
+		return clearZeros(result.substring(1));
 	}
 
 }
