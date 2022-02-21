@@ -8,9 +8,9 @@
 public class Launch {
 	
 	public static void main(String[] args) {
-		String messagePolynom = AlphaNotation.toAlphaNotation("32x91x11x120x209x114x220x77x67x64x236x17x236x17x236x17");
-		String generatorPolynom = "0x251x67x46x61x118x70x64x94x32x45";
-		int[] result = new DivisionProcessor(generatorPolynom, messagePolynom).getRemainders();
+		String messagePolynomial = AlphaNotation.toAlphaNotation("64x244x134x86x198x198x242x7x118x247x38x198x66x18x3x162x144x236x17x236x17x236");
+		String generatorPolynomial = "0x210x171x247x242x93x230x14x109x221x53x200x74x8x172x98x80x219x134x160x105x165x231x";
+		int[] result = new DivisionProcessor(generatorPolynomial, messagePolynomial).getRemainders();
 		for(int r : result) System.out.println(r);
 	}
 
