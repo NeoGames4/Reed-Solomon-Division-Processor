@@ -18,3 +18,6 @@ becomes<br>
 While the message polynomial from above becomes<br>
 `32x91x11x120x209x114x220x77x67x64x236x17x236x17x236x17`<br>
 Note that the first example was written in alpha notation and the second one in integer notation. The DivisionProcessor expects you to enter every polynomial in alpha notation. To convert them, use `AlphaNotation.toAlphaNotation(integerNotation)` and enter the polynomial as shown above.
+
+## Example Use
+The Launch class contains an example calculating the results for the polynomials given in https://www.thonky.com/qr-code-tutorial/error-correction-coding.
